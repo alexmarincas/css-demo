@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.wrapper {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  overflow: hidden;
+}
+
+.wrapper #reference-image {
+  opacity: .3;
+}
+
+.house-holder {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -15%);
+          transform: translate(-50%, -15%);
+}
+
+.house-holder .roof {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 209px solid transparent;
+  border-right: 209px solid transparent;
+  border-bottom: 226px solid #FFF;
+  margin-top: -226px;
+  margin-left: -33px;
+  -webkit-filter: drop-shadow(0px 0px 1px red);
+          filter: drop-shadow(0px 0px 1px red);
+  z-index: 2;
+}
+
+.house-holder .roof .round-window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: 1px solid red;
+  border-radius: 50%;
+  top: 132px;
+}
+
+.house-holder .roof .round-window::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  border-right: 1px solid red;
+  width: 50%;
+}
+
+.house-holder .chimney {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 39px;
+  height: 104px;
+  border: 1px solid red;
+  margin-left: 110px;
+  margin-top: -263px;
+}
+
+.house-holder .chimney::before {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 14px;
+  border: 1px solid red;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: -16px;
+}
+
+.house-holder .chimney::after {
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 37px;
+  background: white;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(47deg);
+          transform: translateX(-50%) rotate(47deg);
+  bottom: 0;
+  bottom: -11px;
+  left: 5px;
+}
+
+.house-holder .house {
+  position: relative;
+  border: 1px solid red;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  width: 350px;
+  height: 250px;
+  justify-items: center;
+      grid-template-areas: 'ferestre' 'usa';
+}
+
+.house-holder .house .ferestre {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: ferestre;
+  width: 295px;
+  height: 81px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 48px;
+  margin-left: -7px;
+}
+
+.house-holder .house .ferestre .fereastra {
+  position: relative;
+  width: 101px;
+  height: 79px;
+  border: 1px solid red;
+}
+
+.house-holder .house .ferestre .fereastra::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid red;
+}
+
+.house-holder .house .ferestre .fereastra.four {
+  height: 81px;
+}
+
+.house-holder .house .ferestre .fereastra.four::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid red;
+  margin-top: -1px;
+}
+
+.house-holder .house .usa {
+  position: relative;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: usa;
+  height: 106px;
+  width: 59px;
+  border: 1px solid red;
+  margin-left: -6px;
+  margin-bottom: -1px;
+}
+
+.house-holder .house .usa::before {
+  content: '';
+  position: absolute;
+  width: 39px;
+  height: 31px;
+  border: 1px solid red;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 9px;
+}
+
+.house-holder .house .usa::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border: 1px solid red;
+  border-radius: 50%;
+  left: 1.5px;
+  top: 50%;
+  margin-top: 1px;
+}
+
+.sun {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid red;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+}
+
+.ground {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 48px;
+  border-top: 1px solid red;
+}
+
+.tree {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  width: 13px;
+  height: 106px;
+  border: 1px solid red;
+  margin-top: 160px;
+  left: 83px;
+}
+
+.tree::after {
+  content: '';
+  position: absolute;
+  width: 121px;
+  height: 121px;
+  border: 1px solid red;
+  border-radius: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  margin-top: 1px;
+  background: white;
+}
+
+.tree.skinny {
+  left: auto;
+  right: 88px;
+  height: 44px;
+  margin-top: 191px;
+}
+
+.tree.skinny::after {
+  width: 40px;
+  height: 126px;
+}
+/*# sourceMappingURL=style.css.map */

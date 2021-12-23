@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.wrapper{
+    width: 800px;
+    height: 600px;
+    position: relative;
+    box-sizing: content-box;
+    overflow: hidden;
+
+    #reference-image{
+        opacity: .3;
+    }
+}
