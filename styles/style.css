@@ -328,4 +328,76 @@ body {
   width: 40px;
   height: 126px;
 }
+
+.check_holder {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.check_holder:hover::after {
+  opacity: 1;
+  margin-top: 70px;
+}
+
+.check_holder::after {
+  position: absolute;
+  content: attr(data-title);
+  width: 150px;
+  font-size: 14px;
+  background-color: black;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+  padding: 3px 2px;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+}
+
+.check_holder #toggleBorders {
+  display: none;
+}
+
+.check_holder #toggleBorders:checked + label {
+  color: #6EB5B8;
+}
+
+.check_holder #toggleBorders:checked + label .box_check {
+  display: inline-block;
+}
+
+.check_holder #toggleBorders:checked + label .box_uncheck {
+  display: none;
+}
+
+.check_holder #toggleBorders + label {
+  cursor: pointer;
+  color: #cacaca;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.check_holder #toggleBorders + label .box_check {
+  display: none;
+}
+
+.check_holder #toggleBorders + label .box_uncheck {
+  display: inline-block;
+}
+
+.check_holder #toggleBorders + label i {
+  font-size: 2rem;
+}
 /*# sourceMappingURL=style.css.map */

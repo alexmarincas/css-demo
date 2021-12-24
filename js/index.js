@@ -1,3 +1,10 @@
 const elements = document.querySelectorAll('.el');
+const toggleBorders = document.querySelector('#toggleBorders');
 
-elements.forEach(el => el.classList.add('border'))
+toggleBorders.addEventListener('change', function(){
+    if(this.checked){
+        elements.forEach(el => el.classList.add('border'));
+    }else{
+        elements.forEach(el => el.classList.remove('border'));
+    }
+});
