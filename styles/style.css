@@ -49,8 +49,8 @@ body {
 }
 
 .house-holder .roof.el-special {
-  -webkit-filter: drop-shadow(0px 0px 1px red);
-          filter: drop-shadow(0px 0px 1px red);
+  -webkit-filter: drop-shadow(0px 0px 3px red);
+          filter: drop-shadow(0px 0px 3px red);
 }
 
 .house-holder .roof .round-window {
@@ -107,12 +107,12 @@ body {
   content: '';
   position: absolute;
   width: 56px;
-  height: 14px;
+  height: 14.5px;
   border: 1px solid transparent;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  margin-top: -16px;
+  margin-top: -17px;
 }
 
 .house-holder .chimney::after {
@@ -329,7 +329,11 @@ body {
   height: 126px;
 }
 
-.check_holder {
+.menu {
+  margin-top: -40px;
+}
+
+.menu .check_holder {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -341,12 +345,12 @@ body {
           align-items: center;
 }
 
-.check_holder:hover::after {
+.menu .check_holder:hover::after {
   opacity: 1;
   margin-top: 70px;
 }
 
-.check_holder::after {
+.menu .check_holder::after {
   position: absolute;
   content: attr(data-title);
   width: 100px;
@@ -366,38 +370,38 @@ body {
   opacity: 0;
 }
 
-.check_holder #toggleBorders {
+.menu .check_holder #toggleBorders {
   display: none;
 }
 
-.check_holder #toggleBorders:checked + label {
+.menu .check_holder #toggleBorders:checked + label {
   color: #6EB5B8;
 }
 
-.check_holder #toggleBorders:checked + label .box_check {
+.menu .check_holder #toggleBorders:checked + label .box_check {
   display: inline-block;
 }
 
-.check_holder #toggleBorders:checked + label .box_uncheck {
+.menu .check_holder #toggleBorders:checked + label .box_uncheck {
   display: none;
 }
 
-.check_holder #toggleBorders + label {
+.menu .check_holder #toggleBorders + label {
   cursor: pointer;
   color: #cacaca;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
-.check_holder #toggleBorders + label .box_check {
+.menu .check_holder #toggleBorders + label .box_check {
   display: none;
 }
 
-.check_holder #toggleBorders + label .box_uncheck {
+.menu .check_holder #toggleBorders + label .box_uncheck {
   display: inline-block;
 }
 
-.check_holder #toggleBorders + label i {
+.menu .check_holder #toggleBorders + label i {
   font-size: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

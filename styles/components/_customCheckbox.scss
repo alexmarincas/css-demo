@@ -1,63 +1,67 @@
-.check_holder{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.menu{
+  margin-top: -40px;
 
-    &:hover{
-        &::after{
-            opacity: 1;
-            margin-top: 70px;
-        }
-    }
-
-    &::after{
-        position: absolute;
-        content: attr(data-title);
-        width: 100px;
-        font-size: 14px;
-        background-color: rgb(22, 22, 22);
-        color: #fff;
-        border-radius: 3px;
-        text-align: center;
-        padding: 3px 2px;
-        pointer-events: none;
-        user-select: none;
-        transition: all .3s ease-in-out;
-        opacity: 0;
-    }
+  .check_holder{
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
   
-     #toggleBorders{
-       display: none;
-       
-       &:checked + label{
-         color: #6EB5B8; 
-                          
-         .box_check{
+      &:hover{
+          &::after{
+              opacity: 1;
+              margin-top: 70px;
+          }
+      }
+  
+      &::after{
+          position: absolute;
+          content: attr(data-title);
+          width: 100px;
+          font-size: 14px;
+          background-color: rgb(22, 22, 22);
+          color: #fff;
+          border-radius: 3px;
+          text-align: center;
+          padding: 3px 2px;
+          pointer-events: none;
+          user-select: none;
+          transition: all .3s ease-in-out;
+          opacity: 0;
+      }
+    
+       #toggleBorders{
+         display: none;
+         
+         &:checked + label{
+           color: #6EB5B8; 
+                            
+           .box_check{
+               display: inline-block;
+           }
+    
+           .box_uncheck{
+             display: none;
+           }
+         }
+        
+         &+label{
+           cursor: pointer;
+           color: #cacaca;
+           transition: all .3s ease-in-out;
+    
+           .box_check{
+             display: none;
+           }
+    
+           .box_uncheck{
              display: inline-block;
-         }
-  
-         .box_uncheck{
-           display: none;
-         }
-       }
-      
-       &+label{
-         cursor: pointer;
-         color: #cacaca;
-         transition: all .3s ease-in-out;
-  
-         .box_check{
-           display: none;
-         }
-  
-         .box_uncheck{
-           display: inline-block;
-         }
-      
-         i{                        
-           font-size: 2rem;                    
-         }
-       }    
-    } 
+           }
+        
+           i{                        
+             font-size: 2rem;                    
+           }
+         }    
+      } 
   }
+}
